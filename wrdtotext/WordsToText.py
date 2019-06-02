@@ -37,5 +37,6 @@ def img2textdir(dirpath):
         names.append(i)
     translation={'Image':names, 'Text':texts}
     df=pd.DataFrame(data=translation)
+    df.to_excel(dirpath+'/img2text.xlsx', sheet_name = 'ImagestoText')
     return df
 
